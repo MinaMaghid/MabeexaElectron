@@ -1,0 +1,42 @@
+{
+  "appId": "com.example.posinventoryapp",
+  "productName": "POS Inventory App",
+  "version": "1.0.0",
+  "description": "A modern desktop point-of-sale and inventory management system.",
+  "main": "src/main/main.ts",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "package.json"
+  ],
+  "directories": {
+    "output": "build"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "src/renderer/assets/icon.ico",
+    "publisher": "Your Name",
+    "requestedExecutionLevel": "requireAdministrator"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  },
+  "mac": {
+    "target": "dmg",
+    "category": "public.app-category.utilities"
+  },
+  "publish": {
+    "provider": "generic",
+    "url": "https://your-update-server.com/"
+  },
+  "extraMetadata": {
+    "license": "MIT"
+  }
+}
